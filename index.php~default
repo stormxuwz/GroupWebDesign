@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<?php
+#########################################################
+# 
+#  Delete this file when creating the actual website.
+# 
+#########################################################
+?>
+<?
+  $website = $_SERVER["HTTP_HOST"];
+  $document_root = $_SERVER["DOCUMENT_ROOT"];
+  $webmaster = $_SERVER["SERVER_ADMIN"];
+  $ip_address = $_SERVER["SERVER_ADDR"];
+  $hostname = $_ENV["HOSTNAME"];
+  $http = "http://";
+  $vosquota_command = "/usr/afsws/bin/fs listquota " . $document_root . " | tail -1";
+  $vosquota_output = preg_split("/[\s,]+/", exec($vosquota_command));
+  $volume = $vosquota_output[0];
+  $quota = $vosquota_output[1];
+
+  if(eregi("internal", $_SERVER["HTTP_HOST"]) )
+  {
+    $internal_site = 1;
+#    $website .= dirname($_SERVER["REQUEST_URI"]);
+    $website .= dirname($_SERVER["SCRIPT_NAME"]);
+    $document_root = dirname($_SERVER["SCRIPT_FILENAME"]);
+    $http = "https://";
+  }
+
+?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Test Page for <?php echo $website; ?> Website</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style type="text/css">
+			/*<![CDATA[*/
+			body {
+				background-color: #fff;
+				color: #000;
+				font-size: 0.9em;
+				font-family: sans-serif,helvetica;
+				margin: 0;
+				padding: 0;
+			}
+			:link {
+				color: #c00;
+			}
+			:visited {
+				color: #c00;
+			}
+			a:hover {
+				color: #f50;
+			}
+			h1 {
+				text-align: center;
+				margin: 0;
+				padding: 0.6em 2em 0.4em;
+				background-color: #22437f;
+				color: #fff;
+				font-weight: normal;
+				font-size: 1.75em;
+				border-bottom: 2px solid #000;
+			}
+			h1 strong {
+				font-weight: bold;
+			}
+			h2 {
+				font-size: 1.1em;
+				font-weight: bold;
+			}
+			hr {
+				display: none;
+			}
+			.content {
+				padding: 1em 5em;
+			}
+			.content-columns {
+				/* Setting relative positioning allows for 
+				absolute positioning for sub-classes */
+				position: relative;
+				padding-top: 1em;
+			}
+			.content-column-left {
+				/* Value for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-right: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-column-left hr {
+				display: none;
+			}
+			.content-column-right {
+				/* Values for IE/Win; will be overwritten for other browsers */
+				width: 47%;
+				padding-left: 3%;
+				float: left;
+				padding-bottom: 2em;
+			}
+			.content-columns>.content-column-left, .content-columns>.content-column-right {
+				/* Non-IE/Win */
+			}
+			img {
+#				border: 2px solid #fff;
+#				padding: 2px;
+#				margin: 2px;
+			}
+			.bottomleft {
+                                width: 7%;
+                                padding-right: 3%;
+                                float: left;
+                                padding-top: .7em;
+                                padding-bottom: 2em;
+			}
+
+			.bottomright {
+				width: 87%;
+                                padding-left: 3%;
+                                float: left;
+                                padding-top: .5em;
+                                padding-bottom: 2em;
+			}
+			a:hover img {
+#				border: 2px solid #f50;
+			}
+			/*]]>*/
+		</style>
+	</head>
+
+	<body>
+
+		<h1><?php echo $website; ?> <strong>Test Page</strong></h1>
+
+		<div class="content">
+			<div class="content-middle">
+				<p>This page is used to test the proper operation of the Apache HTTP server after it has been installed. If you can read this page, it means that the Apache HTTP server installed at this site is working properly.</p>
+			</div>
+			<hr />
+
+			<div class="content-columns">
+				<div class="content-column-left">
+					<h2>If you are a member of the general public:</h2>
+
+					<p>The fact that you are seeing this page indicates that the website you just visited is either experiencing problems, or is undergoing routine maintenance.</p>
+
+					<p>If you would like to let the administrators of this website know that you've seen this page instead of the page you expected, you should send them e-mail to <?php echo $webmaster; ?>.
+</p>
+
+					<hr />
+				</div>
+
+				<div class="content-column-right">
+					<h2>If you are the website administrator:</h2>
+
+					<p>You may now add content to the AFS directory <tt><?php echo $document_root; ?></tt>. Note that until you do so, people visiting your website will see this page, and not your content.</p>
+
+					<p><b>Site Information:</b><br>
+					URL: <tt><A HREF="<?php echo $http; echo $website; ?>/"><?php echo $http; echo $website; ?>/</A></tt><br>
+					IP: <tt><?php echo $ip_address; ?></tt><br>
+					Document Root: <tt><?php echo $document_root; ?></tt><br>
+					AFS Volume: <tt><?php echo $volume; ?></tt><br>
+					Quota: <tt><?php echo $quota/1000; ?> MB</tt><br>
+<?php
+  if($hostname)
+  {
+?>
+					Host Server: <tt><?php echo $hostname; ?></tt><br>
+<?php
+  }
+?>
+
+<?php
+  if(!$internal_site)
+  {
+?>
+					Web Statistics: <tt><a HREF="https://internal.ncsa.uiuc.edu/webstats/<?php echo $website; ?>/">https://internal.ncsa.uiuc.edu/webstats/<?php echo $website; ?>/</a></tt><br>
+<?php
+  }
+?>
+
+					</p>
+
+					<p>For more additional help on setting up this website, visit <a href="http://help.ncsa.uiuc.edu/">NCSA's User Help Site</a>.</p>
+
+				</div>
+			</div>
+
+			<hr />
+			<div class="bottomleft"><a href="http://www.ncsa.uiuc.edu/"><img src="http://www.ncsa.uiuc.edu/includes/images/footer-logo.jpg" alt="[NCSA]" border="0" /></a></div>
+			<div class="bottomright">Contact <a href="mailto:help@ncsa.uiuc.edu">help@ncsa.uiuc.edu</a> with questions regarding this page.<br />All rights reserved. &copy;<?php echo date("Y"); ?> Board of Trustees of the <a href="http://www.uiuc.edu/">University of Illinois</a></div>
+		</div>
+	</body>
+</html>
