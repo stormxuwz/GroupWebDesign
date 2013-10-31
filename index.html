@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<head>
+
+  <!-- Basic Page Needs
+  ================================================== -->
+  <meta charset="utf-8">
+  <title>EISA - Welcome</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Add jQuery library -->
+  <script type="text/javascript" src="lib/jquery-1.9.0.min.js"></script>
+
+  <!-- Add mousewheel plugin (this is optional) -->
+  <script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+  <!-- Add fancyBox main JS and CSS files -->
+  <script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.4"></script>
+  <link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+  <!-- Add Button helper (this is optional) -->
+  <link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+  <script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+  <!-- Add Thumbnail helper (this is optional) -->
+  <link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+  <script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+  <!-- Add Media helper (this is optional) -->
+  <script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+       *  Simple image gallery. Uses default settings
+       */
+
+      $('.fancybox').fancybox();
+
+      /*
+       *  Different effects
+       */
+
+      // Change title type, overlay closing speed
+      $(".fancybox-effects-a").fancybox({
+        helpers: {
+          title : {
+            type : 'outside'
+          },
+          overlay : {
+            speedOut : 0
+          }
+        }
+      });
+    });
+  </script>
+  
+  
+<script type="text/javascript">
+
+var slideimages=new Array();
+function slideshowimages()
+{
+     for (i=0;i<slideshowimages.arguments.length;i++){
+         slideimages[i]=new Image();
+         slideimages[i].src=slideshowimages.arguments[i];
+    }
+}
+
+</script>
+
+
+
+<script>
+
+    $(window).resize(function(){
+
+        w = $(this).width();
+
+        $("div#wrap").css('width',(w < 920) ? w*0.95 : 570);
+
+        $("body").css('overflow-x','hidden');
+
+    });
+
+
+/****************************************
+ * Floating menu jQuery feature
+ ****************************************/
+
+</script>
+
+
+  <style type="text/css">
+    .fancybox-custom .fancybox-skin {
+      box-shadow: 0 0 50px #222;
+    }
+  </style>
+
+  <!-- CSS
+  ================================================== -->
+ 	<link rel="stylesheet" href="stylesheets/base.css">
+  	<link rel="stylesheet" href="stylesheets/skeleton.css">
+  	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/orbit-1.2.3.css">
+	<link rel="stylesheet" href="stylesheets/doc.css">
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+
+
+
+<!-- Start WOWSlider.com HEAD section -->
+	<link rel="stylesheet" type="text/css" href="engine1//style.css" media="screen" />
+	<script type="text/javascript" src="engine1//jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+</head>
+
+<body>
+ <div class="container">
+    <div class="three columns sidebar">
+      <nav id="navi">
+      
+	  <a href="http://www.ncsa.uiuc.edu">
+        <img src="img/ncsa_horizontal.jpg" alt="[NCSA]" height="19" width="120">
+      </a>
+      
+      <a href="http://www.illinois.edu">
+        <img src="img/ilogo_horz_bold.gif" alt="[U of I]" height="23" width="120">
+      </a>
+      
+      <hr>
+ 
+      	
+        <h2 id="logo">EISA</h2>
+        <ul>
+          <li><a href="index.html">Welcome</a></li>
+          <li><a href="people.html">People</a></li>
+                
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+        
+        <br /><br /> <br /><br /> <br /><br /> <br /><br />
+       	<hr>
+       	<p><b><font face="helvetica,arial,sans-serif" size="3" color="red">Open source codes</font></b></p>
+         <a href="https://github.com/MinskerGroup/" class="newbuttom">GitHub</a>
+        </nav>
+        &nbsp;
+    </div>
+        
+        <div class="twelve columns offset-by-one content">
+          <header>
+            <h1> Environmental Informatics and Systems Analysis </h1>
+          </header>
+          <hr class="large">
+          <div class="doc-section" id="about">
+
+
+<br>
+
+
+<!-- Start WOWSlider.com BODY section id=wowslider-container1 -->
+	<div id="wowslider-container1">
+	<div class="ws_images"><ul>
+<li><a href="http://cee.illinois.edu/SRIS"><img src="data1/images/chicagoriver_srispage_0.jpg" alt="Sustainable and Resilient Infrastructure Systems" title="Sustainable and Resilient Infrastructure Systems" id="wows1_0"/></a></li>
+<li><a href="http://cee.illinois.edu/environmental"><img src="data1/images/environmentalengineering_1.jpg" alt="Environmental Systems" title="Environmental Systems" id="wows1_1"/></a></li>
+<li><a href="http://cee.illinois.edu/greeninfrastructure"><img src="data1/images/raingarden.jpg" alt="Green Infrastructure" title="Green Infrastructure" id="wows1_2"/></a></li>
+<li><a href="C:/Users/Sammys/Dropbox/GroupWebDesign/New%20Version/projects.html"><img src="data1/images/deep_tunnels.jpg" alt="MWRD CSO" title="MWRD CSO" id="wows1_3"/></a></li>
+<li><a href="C:/Users/Sammys/Dropbox/GroupWebDesign/New%20Version/projects.html"><img src="data1/images/great_lakes.jpg" alt="Great Lakes - Data mining and Informatics" title="Great Lakes - Data mining and Informatics" id="wows1_4"/></a></li>
+<li><a href="file:///C:/Users/Sammys/Dropbox/GroupWebDesign/New%20Version/publications.html"><img src="data1/images/wordcloudabstracts2.jpg" alt="Publications" title="Publications" id="wows1_5"/></a></li>
+<li><a href="file:///C:/Users/Sammys/Dropbox/GroupWebDesign/New%20Version/people.html"><img src="data1/images/group_2013_reduced.jpg" alt="EISA Group" title="EISA Group" id="wows1_6"/></a></li>
+<li><img src="data1/images/ncsa.jpg" alt="NCSA" title="NCSA" id="wows1_7"/></li>
+</ul></div>
+<div class="ws_bullets"><div>
+<a href="#" title="Sustainable and Resilient Infrastructure Systems"><img src="data1/tooltips/chicagoriver_srispage_0.jpg" alt="Sustainable and Resilient Infrastructure Systems"/>1</a>
+<a href="#" title="Environmental Systems"><img src="data1/tooltips/environmentalengineering_1.jpg" alt="Environmental Systems"/>2</a>
+<a href="#" title="Green Infrastructure"><img src="data1/tooltips/raingarden.jpg" alt="Green Infrastructure"/>3</a>
+<a href="#" title="MWRD CSO"><img src="data1/tooltips/deep_tunnels.jpg" alt="MWRD  Combined Sewer Overflows"/>4</a>
+<a href="#" title="Great Lakes - Data mining and Informatics"><img src="data1/tooltips/great_lakes.jpg" alt="Great Lakes - Data mining and Informatics"/>5</a>
+<a href="#" title="Publications"><img src="data1/tooltips/wordcloudabstracts2.jpg" alt="Publications"/>6</a>
+<a href="#" title="EISA Group"><img src="data1/tooltips/group_2013_reduced.jpg" alt="EISA Group"/>7</a>
+<a href="#" title="NCSA"><img src="data1/tooltips/ncsa.jpg" alt="NCSA"/>8</a>
+</div></div>
+<span class="wsl"><a href="http://wowslider.com">Image Carousel</a> by WOWSlider.com v4.6</span>
+	<div id="wowslider-shadow"></div>
+	<a href="#" class="ws_frame"></a>
+	<div class="ws_shadow"></div>
+	</div>
+	<script type="text/javascript" src="engine1//wowslider.js"></script>
+	<script type="text/javascript" src="engine1//script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+<br>
+<br>
+
+<h3>Welcome</h3>
+            <p>
+              The EISA group is investigating improved methods for modeling complex environmental systems so that informed management-level decisions can be made under conditions of uncertainty. Coupling machine learning approaches with sensor data and advanced information technology, innovative and cost-effective solutions to complex environmental problems are being investigated.
+            </p>
+
+        </div>
+        
+        <hr>
+        
+        <div class="doc-section clearfix">
+        	<h3>Recent news:</h3>
+        	<h4><a href="http://cee.illinois.edu/greeninfrastructure"> New way to crowd-source design of green infrastructure</a></h4>
+			<p>Development of a novel computational green infrastructure design framework that integrates interactive, neighborhood-scale, collaborative design by multiple stakeholders ("crowd-sourced design") with multi-scale models of ecosystem and human impacts.</p>
+			
+			<h4><a href="http://content.asce.org/conferences/ewri2013"> The EISA group will have several presentations at the 2013 EWRI Conference</a></h4>
+			<p><li><u>Model Complexity for Decision Support: When is Simple Enough and Complex Warranted?</u>, Barbara Minsker</li> 
+				<li><u>Regional Climate Change: An Analysis of a Hydrologic Classification System's Shifted Regime Curves</u>, Evan Coopersmith </li>
+				<li><u>Genetic Algorithm Evaluation of Financial Penalties for Combined Sewer Overflow Management</u>, Andrea Zimmer</li>
+				<li><u>Real-Time Adaptive Control of Streaming Sensor Data with Integrated Quality Control Mechanisms</u>, Tristan Wietsma</li>
+				<li><u>Advancing Sustainability Indicators through Text Mining: A Feasibility Demonstration</u>, Samuel Rivera </li></p>
+		
+		</div>
+  
+			<hr>
+		<div class="footer">
+			<p style="text-align:right; margin: 0" >Update time: 2013/09/17</p>
+			<p style="text-align:right; margin: 0">Made with <a href="http://www.getskeleton.com/">Skeleton</a></p>
+			<div style="text-align:right" >Bug Report: wxu15@illinois.edu, srivera2@illinois.edu</div>
+		</div>
+	</div>
+</body>

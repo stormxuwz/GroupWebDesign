@@ -1,8 +1,0 @@
-<hr>
-<center>
-  Last updated on
-  <!--#config timefmt="%d %B %Y" -->
-  <!--#echo var="LAST_MODIFIED" -->
-  by <a href="mailto:djhill1@ncsa.uiuc.edu">David Hill </a>
-</center>
-
